@@ -1,15 +1,11 @@
-import { Box } from "@chakra-ui/react";
-
-import SomeText from "components/SomeText";
-import SomeImage from "components/SomeImage";
-import CTASection from "components/CTASection";
+import { Box, Stack, Grid, GridItem, Text } from "@chakra-ui/react";
+import HomeContent from "components/homeContent";
+import React from "react";
 
 const Home = () => {
   return (
-    <Box mb={8} w="full">
-      <SomeText />
-      <SomeImage />
-      <CTASection />
+    <Box mb={8} w="full" h="full">
+      <HomeContent />
     </Box>
   );
 };

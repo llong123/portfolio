@@ -1,15 +1,17 @@
-import { Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Flex as="footer" width="full" align="center">
-      <Text>
-        {new Date().getFullYear()} -{" "}
-        <Link href="https://sznm.dev" isExternal>
-          sznm.dev
-        </Link>
-      </Text>
-    </Flex>
+    <Box
+      as="footer"
+      width="full"
+      textAlign="center"
+      pos="fixed"
+      bottom={0}
+      h={12}
+    >
+      <Text>@Long Hoang {new Date().getFullYear()}</Text>
+    </Box>
   );
 };
 
