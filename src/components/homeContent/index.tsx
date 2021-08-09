@@ -1,8 +1,24 @@
 import React from "react";
 import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
-import { useEffect } from "react";
+import useDencrypt from "hooks/useDencrypt";
+
+const values = ["a Father", "a Programmer", "an Engineer", "Text Effect"];
 
 const HomeContent = () => {
+  const { result, dencrypt } = useDencrypt();
+
+  React.useEffect(() => {
+    let i = 0;
+
+    const action = setInterval(() => {
+      dencrypt(values[i]);
+
+      i = i === values.length - 1 ? 0 : i + 1;
+    }, 2000);
+
+    return () => clearInterval(action);
+  }, []);
+
   return (
     <Grid
       templateRows="repeat(3, 1fr)"
@@ -19,7 +35,7 @@ const HomeContent = () => {
       >
         <Stack spacing={1}>
           <Text fontSize="6xl">Long Hoang</Text>
-          <Text fontSize="3xl">I am a</Text>
+          <Text fontSize="3xl">I am {result}</Text>
         </Stack>
       </GridItem>
     </Grid>
