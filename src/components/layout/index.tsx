@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Meta />
       <Box padding="8" h="full">
         <Header />
-        <Box as="main" marginY={22}>
+        <Box as="main" h="90%">
           {children}
         </Box>
         <Footer />
