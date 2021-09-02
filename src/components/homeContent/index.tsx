@@ -2,10 +2,10 @@ import React from "react";
 import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import useDencrypt from "hooks/useDencrypt";
 
-const values = ["a Father", "a Programmer", "an Engineer"];
+const values = ["Programmer", "Software Engineer", "IT Engineer", "Developer"];
 
 const HomeContent = () => {
-  const { result, dencrypt } = useDencrypt();
+  const { result, dencrypt } = useDencrypt("Developer");
 
   React.useEffect(() => {
     let i = 0;
@@ -20,12 +20,7 @@ const HomeContent = () => {
   }, [dencrypt]);
 
   return (
-    <Grid
-      templateRows="repeat(3, 1fr)"
-      templateColumns="repeat(2, 1fr)"
-      h="full"
-      gap={4}
-    >
+    <Grid templateRows="repeat(3, 1fr)" h="full" gap={4}>
       <GridItem
         display="flex"
         rowSpan={3}
@@ -33,9 +28,11 @@ const HomeContent = () => {
         alignItems="center"
         ml="2"
       >
-        <Stack padding={16} spacing={1}>
-          <Text fontSize="6xl">Long Hoang</Text>
-          <Text fontSize="3xl">I am {result}</Text>
+        <Stack padding={[4, 6, 8, 10]} spacing={1}>
+          <Text
+            fontSize={["lg", "xl", "2xl", "3xl"]}
+          >{`Hi! I am Long Hoang,`}</Text>
+          <Text fontSize={["2xl", "4xl", "5xl", "6xl"]}>{`a ${result}`}</Text>
         </Stack>
       </GridItem>
     </Grid>

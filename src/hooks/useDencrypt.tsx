@@ -50,9 +50,9 @@ const defaultOptions = {
   interval: 50,
 };
 
-export const useDencrypt = (options?: Partial<typeof defaultOptions>) => {
-  const [value, setValue] = useState("");
-  const [result, setResult] = useState("");
+export const useDencrypt = (initText?: string, options?: Partial<typeof defaultOptions>) => {
+  const [value, setValue] = useState(initText ?? "");
+  const [result, setResult] = useState(initText ?? "");
 
   const { chars, interval } = { ...defaultOptions, ...options };
 

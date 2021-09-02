@@ -6,7 +6,6 @@ const Footer = () => {
       as="footer"
       width="full"
       textAlign="center"
-      pos="fixed"
       bottom={0}
       h={12}
     >
