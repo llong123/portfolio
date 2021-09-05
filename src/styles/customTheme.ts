@@ -1,6 +1,7 @@
 import { theme, extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools"
 
+
 // This is the default breakpoint
 const breakpoints = createBreakpoints({
   sm: "30em",
@@ -15,8 +16,8 @@ const customTheme = extendTheme({
   breakpoints,
   fonts: {
     ...theme.fonts,
-    body: "Lexend, sans-serif",
-    heading: "Lexend, serif",
+    body: "Montserrat, Lexend, sans-serif",
+    heading: "Montserrat, Lexend, serif",
   },
   colors: {
     ...theme.colors,
@@ -29,6 +30,15 @@ const customTheme = extendTheme({
     // },
   },
   components: {
+    Button: {
+      variants: {
+        "ghost" : {
+          _focus: {
+            boxShadow: "none"
+          }
+        }
+      }
+    }
     /** Example */
     // Button: {
     //   baseStyle: {

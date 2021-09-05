@@ -1,7 +1,21 @@
+:root {
+  --header-height: 50px;
+}
+
 /* Global Styling here */
 html,
 body,
 #__next {
   height: 100%;
   margin: 0;
+}
+
+.headerContainer {
+  height: var(--header-height);
+  width: 100%;
+  align-items: center;
+}
+
+.mainContainer {
+  min-height: calc(100% - var(--header-height));
 }
