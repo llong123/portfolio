@@ -5,8 +5,10 @@ const AboutPage = () => {
   return (
     <Flex
       direction="column"
-      mt={{ base: "2rem", md: "4rem" }}
+      pt="10vh"
       alignItems="center"
+      minH="100vh"
+      id="about"
     >
       <Text as="h2" mb={4} fontSize={["3xl", "4xl", "5xl", "6xl"]}>
         About me

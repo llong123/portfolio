@@ -15,7 +15,7 @@ const PortfolioPage = () => {
   ];
 
   return (
-    <Flex justify="center" mt={{ base: "2rem", md: "4rem" }} w="full">
+    <Flex justify="center" pt="10vh" w="full" minH="100vh" id="portfolio">
       <VStack w="full">
         <Text as="h2" fontSize={["3xl", "4xl", "5xl", "6xl"]}>
           Portfolio

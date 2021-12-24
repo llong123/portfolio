@@ -1,4 +1,10 @@
-import { Button, Flex, HStack, IconButton } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  HStack,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 
@@ -8,20 +14,21 @@ import { RiMenuFoldFill } from "react-icons/ri";
 const Header = () => {
   const router = useRouter();
 
+  const bg = useColorModeValue("white", "gray.800");
   return (
-    <Flex as="header" className="headerContainer">
+    <Flex as="header" className="headerContainer" bg={bg}>
       <Flex marginLeft="auto">
         <HStack display={{ base: "none", md: "flex" }} spacing={4}>
-          <Button variant="ghost" onClick={() => router.push("/")}>
+          <Button variant="ghost" onClick={() => router.push("#")}>
             Home
           </Button>
-          <Button variant="ghost" onClick={() => router.push("/about")}>
+          <Button variant="ghost" onClick={() => router.push("#about")}>
             About
           </Button>
-          <Button variant="ghost" onClick={() => router.push("/portfolio")}>
+          <Button variant="ghost" onClick={() => router.push("#portfolio")}>
             Portfolio
           </Button>
-          <Button variant="ghost" onClick={() => router.push("/contact")}>
+          <Button variant="ghost" onClick={() => router.push("#contact")}>
             Contact
           </Button>
           <ThemeToggle />

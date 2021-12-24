@@ -1,5 +1,5 @@
 :root {
-  --header-height: 50px;
+  --header-height: 3.5rem;
 }
 
 /* Global Styling here */
@@ -8,12 +8,17 @@ body,
 #__next {
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .headerContainer {
   height: var(--header-height);
   width: 100%;
   align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  z-index: 10;
 }
 
 .mainContainer {
